@@ -132,16 +132,16 @@ Another easy mistake one could do is to disable dropout while testing and valida
 
 Finally, here is the architecture I have used. For each convolutional layer Kernel = (3,3), Stride = (1,1), Padding = VALID, and ReLU Activation are used
 
-    * Layer 1: Convolutional. Input = 32x32x1. Output = 30x30x8.
-    * Layer 2: Convolutional. Input = 30x30x8. Output = 28x28x8.
-    * Pooling 1. Input = 28x28x8. Output = 14x14x8.    
-    * Layer 3: Convolutional. Input = 14x14x8. Output = 12x12x16.
-    * Layer 4: Convolutional. Input = 12x12x16. Output = 10x10x16.
-    * Pooling 2. Input = 10x10x16. Output = 5x5x16.    
-    * Layer 5: Convolutional. Input = 5x5x16. Output = 3x3x16.
-    * Layer 6: Convolutional. Input = 3x3x16. Output = 1x1x600. (The number of output filter can be experimented)
-    * Flatten the layers 4 and 6 and concatenate
-    * Layer 7: Concatenated fully connected layer. Input = 1000. Output = 43. Droupout layer with 0.5 probability
+* Layer 1: Convolutional. Input = 32x32x1. Output = 30x30x8.
+* Layer 2: Convolutional. Input = 30x30x8. Output = 28x28x8.
+* Pooling 1. Input = 28x28x8. Output = 14x14x8.    
+* Layer 3: Convolutional. Input = 14x14x8. Output = 12x12x16.
+* Layer 4: Convolutional. Input = 12x12x16. Output = 10x10x16.
+* Pooling 2. Input = 10x10x16. Output = 5x5x16.    
+* Layer 5: Convolutional. Input = 5x5x16. Output = 3x3x16.
+* Layer 6: Convolutional. Input = 3x3x16. Output = 1x1x600. (The number of output filter can be experimented)
+* Flatten the layers 4 and 6 and concatenate
+* Layer 7: Concatenated fully connected layer. Input = 1000. Output = 43. Droupout layer with 0.5 probability
 
 ### Training the Model
 
@@ -149,11 +149,11 @@ For training the model, I used an Adam Optimizer as suggested in the notebook an
 
 The training and validation loss curve are shown below.
 
-![alt text](writupFiles/output_71_0.png "Loss curve")
+![alt text](writeupFiles/output_71_0.png "Loss curve")
 
 The training and validation accuracy curve are shown below.
 
-![alt text](writupFiles/output_72_0.png "Accuracy curve")
+![alt text](writeupFiles/output_72_0.png "Accuracy curve")
 
 To sum up, the training accuracy was ~98 % and validation accuracy was ~96 %.
 
